@@ -1,6 +1,6 @@
 {
   "name": "node-pastesh",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "keywords": [
     "paste.sh",
     "pastebin",
@@ -28,7 +28,8 @@
   "exports": {
     ".": {
       "require": "./dist/cjs/index.js",
-      "import": "./dist/esm/index.js"
+      "import": "./dist/esm/index.js",
+      "types": "./dist/types/index.d.ts"
     }
   }
 }
