@@ -166,7 +166,7 @@ class Pastesh {
     }
   }
 
-  public static testEncryption() {
+  private static testEncryption() {
     const serverKey = Pastesh.randBase64(18);
     const id = Pastesh.randBase64(6);
     const clientKey = Pastesh.randBase64(18);
@@ -200,6 +200,6 @@ class Pastesh {
 }
 
 // Run the unit test
-Pastesh.testEncryption();
+// Pastesh.testEncryption();
 
 export default Pastesh;
