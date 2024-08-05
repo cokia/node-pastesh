@@ -39,7 +39,8 @@ class Pastesh {
     const tmpPlainFilePath = path.join(os.tmpdir(), `plain_${id}.txt`);
     const tmpEncFilePath = path.join(os.tmpdir(), `enc_${id}.txt`);
 
-    fs.writeFileSync(tmpPlainFilePath, message);
+    // Add a space at the beginning of the message
+    fs.writeFileSync(tmpPlainFilePath, " " + message);
 
     execSync(
       `openssl enc -aes-256-cbc -md sha512 -pass pass:${key} -iter 1 -base64 -in ${tmpPlainFilePath} -out ${tmpEncFilePath}`
