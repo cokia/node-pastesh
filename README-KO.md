@@ -80,19 +80,19 @@ console.log(`Paste created successfully: ${url}`);
 
 ## API
 
-### `pastesh.create(message: string, apiEndpoint?: string): Promise<string>`
+### `pastesh.create(message: string, apiEndpoint?: string, subject?: string): Promise<string>`
 
 주어진 메시지로 새로운 붙여넣기를 생성합니다.
 
 - `message` (string): 붙여넣을 내용.
 - `apiEndpoint` (string, optional): 붙여넣기를 업로드할 API 엔드포인트. 기본값은 `https://paste.sh`.
+- `subject` (string, optional): 업로드될 paste의 타이틀
+
 
 생성된 붙여넣기의 URL로 해결되는 프라미스를 반환합니다.
 
 ## 기여
-
-openssh 명령을 호출하는 형태를 벗어나서, nodejs 기본 Crypto 패키지만을 사용해 구현하는 작업을 진행중에 있습니다.
-이러한 작업을 도와주실 수 있는 분이라면, 언제든지 Issue나 Pull Request 를 남겨주시면 감사드리겠습니다. 
+언제든지 Issue나 Pull Request 를 남겨주시면 감사드리겠습니다. 
 
 ## 라이선스
 

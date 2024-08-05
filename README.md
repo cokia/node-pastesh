@@ -80,18 +80,18 @@ console.log(`Paste created successfully: ${url}`);
 
 ## API
 
-### `pastesh.create(message: string, apiEndpoint?: string): Promise<string>`
+### `pastesh.create(message: string, apiEndpoint?: string, subject?: string): Promise<string>`
 
 Creates a new paste with the given message.
 
 - `message` (string): The content to be pasted.
 - `apiEndpoint` (string, optional): The API endpoint to upload the paste. Defaults to `https://paste.sh`.
+- `subject` (string, optional): The Title to be uploaded contents.
 
 Returns a promise that resolves to the URL of the created paste.
 
 ## Contributing
-
-We are working on implementing this without relying on the `openssl` command, using only the native Node.js `crypto` package. If you can help with this task, please feel free to open an issue or submit a pull request. 
+please feel free to open an issue or submit a pull request. 
 
 ## License
 
