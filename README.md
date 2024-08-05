@@ -74,7 +74,9 @@ By default, the paste will be uploaded to `https://paste.sh`. If you want to use
 
 ```typescript
 const customEndpoint = 'https://custom-paste.sh';
-const url = await pastesh.create(message, customEndpoint);
+const title = 'My Custom Paste';
+const message = 'This is the body of the paste.';
+const url = await pastesh.create(message, title, customEndpoint);
 console.log(`Paste created successfully: ${url}`);
 ```
 

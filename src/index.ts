@@ -53,7 +53,9 @@ class Pastesh {
     const key = Pastesh.writeKey(id, serverKey, clientKey);
 
     if (version === 3) {
-      message = "Subject: " + subject.replace(/\n/g, "") + "\n\n" + message;
+      if (subject) {
+        message = "Subject: " + subject.replace(/\n/g, "") + "\n\n" + message;
+      }
     }
 
     const salt = CryptoJS.lib.WordArray.random(8);
@@ -126,8 +128,8 @@ class Pastesh {
 
   public static async create(
     message: string,
-    apiEndpoint: string = "https://paste.sh",
-    subject: string = ""
+    subject: string = "",
+    apiEndpoint: string = "https://paste.sh"
   ): Promise<string> {
     const serverKey = Pastesh.randBase64(18);
     const id = Pastesh.randBase64(6);
