@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": "./dist/cjs",
+    "declaration": true,
+    "declarationMap": true,
+    "strict": true
+  },
+  "include": ["src"]
+}
